@@ -7,7 +7,7 @@ import { useFrame, useThree, useLoader } from '@react-three/fiber';
 function PraticeRender({size}) {
     const meshRef = useRef();
     console.log(meshRef)
-    const instances = 100000
+    const instances = 1000;
     const rows = Math.sqrt(instances);
     const cols = rows;
     const spacingX = size[0] / cols; // Horizontal spacing
@@ -55,7 +55,7 @@ function PraticeRender({size}) {
         uniforms: uniforms,
         vertexShader: GrassVertex,
         fragmentShader: GrassFragment,
-        side: THREE.DoubleSide
+        side: THREE.DoubleSide,
       });
     }, [texture, noise]);
 
@@ -64,7 +64,7 @@ function PraticeRender({size}) {
     });
 
   return (
-    <group>
+    <group >
     <instancedMesh ref={meshRef} args={[null, null, instances]} material={grassMaterial} position={[0,0.5,0]}>
         <planeGeometry >
         <instancedBufferAttribute attach='attributes-terrPosi' array={terrPo} count={terrPo.length/3} itemSize={3}/>

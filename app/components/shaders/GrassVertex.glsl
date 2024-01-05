@@ -28,7 +28,7 @@ void main() {
         newPos.y += noiseValue *2.6; // Apply height displacement
     }
 
-    float swayFactor = 0.1; // Adjust the strength of the sway
+    float swayFactor = 0.3; // Adjust the strength of the sway
         float swaySpeed = 2.0; // Adjust the speed of the sway
 
         if( position.y > 0.0 ) {
