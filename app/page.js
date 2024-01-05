@@ -38,7 +38,7 @@ export default function Home() {
       />
         <PraticeRender size={planeSize}/>
         <Stones size={planeSize}/>
-        {/* <CameraControls /> */}
+        <CameraControls />
          <gridHelper args={[200, 200, 0xff0000, 'teal']} />
       </Canvas>
     </div>
