@@ -30,8 +30,9 @@ export default function Home() {
         skyColor={"#ffffff"} // Color of the sky light
         groundColor={"#b1b1b1"} // Color of the ground light
         intensity={5} // Adjust the light intensity
-        position={[5, 10, 0]} // Adjust the position if needed
+        position={[-5, 10, 0]} // Adjust the position if needed
       />
+      <pointLight position={[0, 2, 0]} intensity={2} color={"#b1b1b1"}/>
       <Sky sunPosition={[100, 10, 100]} />
       <PerspectiveCamera position={[0, 100, 10]}/>
         <PraticeRender size={planeSize}/>
