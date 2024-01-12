@@ -7,8 +7,6 @@ import Stones from './components/Stones'
 export default function Home() {
 
   const planeSize = [15, 15];
-  const height = window.innerHeight;
-  const width = window.innerWidth;
   return (
     <div className="h-screen w-screen">
       <Canvas 
@@ -24,10 +22,6 @@ export default function Home() {
           shadow-mapSize-height={2048}
           intensity={10}
         />
-        <perspectiveCamera
-        position={[100, 10000, 100]} // x, y, z coordinates
-        aspect={width / height} // Aspect ratio
-      />
 
 
 <hemisphereLight 
