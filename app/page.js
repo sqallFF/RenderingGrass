@@ -1,6 +1,6 @@
 'use client'
 import {Canvas} from "@react-three/fiber"
-import {CameraControls} from '@react-three/drei'
+import {CameraControls, PerspectiveCamera, Sky} from '@react-three/drei'
 import PraticeRender from './components/PraticeRender'
 import Stones from './components/Stones'
 
@@ -24,18 +24,16 @@ export default function Home() {
           shadow-mapSize-height={2048}
           intensity={10}
         />
-        <perspectiveCamera
-        position={[100, 10000, 100]} // x, y, z coordinates
-        aspect={width / height} // Aspect ratio
-      />
 
 
 <hemisphereLight 
         skyColor={"#ffffff"} // Color of the sky light
         groundColor={"#b1b1b1"} // Color of the ground light
         intensity={5} // Adjust the light intensity
-        position={[0, 10, 0]} // Adjust the position if needed
+        position={[5, 10, 0]} // Adjust the position if needed
       />
+      <Sky sunPosition={[100, 10, 100]} />
+      <PerspectiveCamera position={[0, 100, 10]}/>
         <PraticeRender size={planeSize}/>
         <Stones size={planeSize}/>
         <CameraControls />
