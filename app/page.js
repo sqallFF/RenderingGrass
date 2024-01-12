@@ -7,8 +7,6 @@ import Stones from './components/Stones'
 export default function Home() {
 
   const planeSize = [15, 15];
-  const height = window.innerHeight;
-  const width = window.innerWidth;
   return (
     <div className="h-screen w-screen">
       <Canvas 
